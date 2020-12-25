@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.southwind.repository.CustomerDao">
+    <resultMap id="customerMap" type="com.southwind.entity.Customer">
+        <id column="cid" property="id"/>
+        <result column="cname" property="name"/>
+        <collection property="goodsList" ofType="com.southwind.entity.Goods">
+            <id column="gid" property="id"/>
+            <result column="gname" property="name"/>
+        </collection>
+    </resultMap>
+
+    <select id="findByID" parameterType="java.lang.Integer" resultMap="customerMap">
+        select c.id cid, c.name cname, g.id gid, g.name gname from customer c, goods g, customer_goods cg where c.id=cg.cid and g.id=cg.gid and c.id=#{id};
+    </select>
+</mapper>

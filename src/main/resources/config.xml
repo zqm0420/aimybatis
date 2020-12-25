@@ -18,5 +18,9 @@
     <mappers>
         <mapper resource="com/southwind/mapper/AccountMapper.xml"/>
         <mapper resource="com/southwind/repository/AccountRepository.xml"/>
+        <mapper resource="com/southwind/repository/StudentMapper.xml"/>
+        <mapper resource="com/southwind/repository/ClassesMapper.xml"/>
+        <mapper resource="com/southwind/repository/CustomerMapper.xml"/>
+        <mapper resource="com/southwind/repository/GoodsMapper.xml"/>
     </mappers>
 </configuration>

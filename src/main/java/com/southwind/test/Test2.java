@@ -1,6 +1,5 @@
 package com.southwind.test;
 
-import com.southwind.entity.Account;
 import com.southwind.repository.AccountRepository;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
